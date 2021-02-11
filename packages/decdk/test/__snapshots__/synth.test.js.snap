@@ -1847,23 +1847,7 @@ Object {
         "KeyPolicy": Object {
           "Statement": Array [
             Object {
-              "Action": Array [
-                "kms:Create*",
-                "kms:Describe*",
-                "kms:Enable*",
-                "kms:List*",
-                "kms:Put*",
-                "kms:Update*",
-                "kms:Revoke*",
-                "kms:Disable*",
-                "kms:Get*",
-                "kms:Delete*",
-                "kms:ScheduleKeyDeletion",
-                "kms:CancelKeyDeletion",
-                "kms:GenerateDataKey",
-                "kms:TagResource",
-                "kms:UntagResource",
-              ],
+              "Action": "kms:*",
               "Effect": "Allow",
               "Principal": Object {
                 "AWS": Object {
@@ -1884,25 +1868,7 @@ Object {
                 },
               },
               "Resource": "*",
-            },
-            Object {
-              "Action": Array [
-                "kms:Decrypt",
-                "kms:Encrypt",
-                "kms:ReEncrypt*",
-                "kms:GenerateDataKey*",
-              ],
-              "Effect": "Allow",
-              "Principal": Object {
-                "AWS": Object {
-                  "Fn::GetAtt": Array [
-                    "BuildProjectRoleAA92C755",
-                    "Arn",
-                  ],
-                },
-              },
-              "Resource": "*",
-            },
+            }
           ],
           "Version": "2012-10-17",
         },
